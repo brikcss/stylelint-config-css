@@ -1,0 +1,31 @@
+##
+# .travis.yml
+# -----------
+# @author brikcss
+# @homepage https://github.com/brikcss
+# @description Configuration file for [TravisCI](https://travis-ci.org/).
+# ---------------------------------------------------------------------
+##
+
+
+language: node_js
+cache:
+  bundler: true
+  directories:
+    - node_modules
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+node_js:
+  - '9'
+  - '8'
+before_script:
+  - npm prune -d
+script:
+  - npm run build -d
+after_success:
+  - npm run release -d
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
