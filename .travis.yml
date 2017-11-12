@@ -20,16 +20,16 @@ notifications:
 node_js:
   - '9'
   - '8'
-before_script:
-  - npm prune -d
-script:
-  - npm run prod -d
+before_script: npm prune -d
+script: npm run prod -d
 
 jobs:
   include:
     - stage: release
       node_js: '9'
-      script: npm run release -d
+      before_script: npm prune -d
+      script: npm run prod -d
+      after_script: npm run release -d
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
