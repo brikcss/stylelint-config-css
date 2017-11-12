@@ -14,7 +14,7 @@
 
 1. [Set up the new component repo & test](#set-up-the-new-component-repo-and-test)
 1. [Update configs / root files](#update-configs--root-files)
-1. [Set up dependencies](#set-up-dependencies)
+1. [Set up the release](#set-up-the-release)
 1. [Build the component](#build-the-component)
 
 <!-- /MarkdownTOC -->
@@ -58,13 +58,13 @@
 	- [ ] Update the rest of `README.md` as desired.
 - [ ] `webpack.config.js` to ensure it compiles the correct files / bundles.
 
-<a name="set-up-dependencies"></a>
-## Set up dependencies
+<a name="set-up-the-release"></a>
+## Set up the release
 
 - [ ] Install NPM packages with `npm install`.
 - [ ] Set up [`semantic-release`](https://github.com/semantic-release/semantic-release) by running `semantic-release-cli setup`.
 
-_Note: Semantic release will publish your first release as version `1.0.0`, there's no known way to change this. If you want to start at an earlier version (such as `0.0.1`), do the following:_
+_Note: Semantic release will publish your first release as version `1.0.0`, there's no known way to change this. If you want to start at a version less than `1.0.0` (such as `0.0.1`), do the following to ensure it is not bumped to `1.0.0` by `semantic-release`:_
 
 - [ ] Update the `version` in `package.json` to `0.0.1`.
 - [ ] Publish your first release manually with `npm publish --tag=<tag> --access=public`.
