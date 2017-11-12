@@ -1,14 +1,13 @@
 # Brikcss Component
 
+> A scaffolding / starter repo for new [brikcss](https://github.com/brikcss/) components. Follow these steps to set up a new component.
+
 [![npm (scoped)](https://img.shields.io/npm/v/@brikcss/component.svg?style=flat-square)](https://www.npmjs.com/package/@brikcss/component
 ) [![npm (scoped)](https://img.shields.io/npm/dm/@brikcss/component.svg?style=flat-square)](https://www.npmjs.com/package/@brikcss/component
 ) [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square&label=master)](https://github.com/brikcss/component/tree/master
-) [![Travis branch](https://img.shields.io/travis/rust-lang/rust/dev.svg?style=flat-square&label=dev)](https://github.com/brikcss/component/tree/dev
 ) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/
 ) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release
 ) [![npm](https://img.shields.io/npm/l/express.svg?style=flat-square)](https://choosealicense.com/licenses/mit/)
-
-> A scaffolding / starter repo for new brikcss components. Follow these steps to set up a new component.
 
 <!-- MarkdownTOC -->
 
@@ -63,25 +62,6 @@
 
 - [ ] Install NPM packages with `npm install`.
 - [ ] Set up [`semantic-release`](https://github.com/semantic-release/semantic-release) by running `semantic-release-cli setup`.
-- [ ] Create a `master` branch for the `stable` channel and a `dev` branch for the `dev` channel.
-- [ ] Configure `package.json` on the `master` branch to point to the `latest` channel:
-	```js
-	"release": {
-		"branch": "master"
-	},
-	"publishConfig": {
-		"tag": "latest"
-	},
-	```
-- [ ] Configure `package.json` on the `dev` branch to point to the `dev` channel:
-	```js
-	"release": {
-		"branch": "dev"
-	},
-	"publishConfig": {
-		"tag": "dev"
-	},
-	```
 - [ ] [semantic-release](https://github.com/semantic-release/semantic-release) creates the first release at version `1.0.0`. If you want to start on a different version (such as `0.0.1`), you must do the following:
 	- [ ] Update the `version` in `package.json` to `0.0.1` (or the version you wish to start at).
 	- [ ] Publish your first release manually with `npm publish --tag=<tag> --access=public`.
