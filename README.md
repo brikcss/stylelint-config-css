@@ -21,11 +21,20 @@
 <a name="set-up-the-new-component-repo-and-test"></a>
 ## Set up the new component repo & test
 
-- [ ] Clone (or fork) this repo.
-- [ ] Create repo in GitHub for new component.
-- [ ] Configure remote branch tracking as follows:
-	- [ ] _origin_: tracks the new component repo in GitHub.
-	- [ ] _upstream_: tracks this scaffolding repo.
+- [ ] Clone this repo.
+- [ ] Create a new repo in GitHub for the new component.
+- [ ] Configure remote tracking as follows:
+	```bash
+	# Set this component repo as upstream to be able to stay in sync.
+	git remote rename origin upstream
+	# Add the new GitHub repo as the remote origin.
+	git remote add origin <github repo url>
+	```
+- [ ] When you run `git remote -v`, the `origin` should track the new GitHub repo and the `upstream` should track this component scaffold repo.
+- [ ] In the future, to stay in sync with this component `upstream` repo:
+	```bash
+	git merge upstream/master
+	```
 
 <a name="update-configs--root-files"></a>
 ## Update configs / root files
@@ -66,6 +75,10 @@
 	- [ ] Update the `version` in `package.json` to `0.0.1` (or the version you wish to start at).
 	- [ ] Publish your first release manually with `npm publish --tag=<tag> --access=public`.
 	- [ ] Update `version` in `package.json` back to `0.0.0-development`.
+- [ ] After it is published, create a `dev` channel / dist-tag:
+	```bash
+	npm dist-tag add @brikcss/<component>@<version> dev -d
+	```
 
 <a name="build-the-component"></a>
 ## Build the component
