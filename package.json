@@ -80,64 +80,12 @@
 		"branch": "dev",
 		"analyzeCommits": {
 			"preset": "angular",
-			"releaseRules": [{
-					"message": "/[minor]/",
-					"release": "minor"
-				},
-				{
-					"subject": "/[minor]/",
-					"release": "minor"
-				},
-				{
-					"message": "/[patch]/",
-					"release": "patch"
-				},
-				{
-					"subject": "/[patch]/",
-					"release": "patch"
-				},
-				{
-					"type": "feat",
-					"release": "minor"
-				},
-				{
-					"type": "feature",
-					"release": "minor"
-				},
-				{
-					"type": "docs",
-					"release": "patch"
-				},
-				{
-					"type": "fix",
-					"release": "patch"
-				},
-				{
-					"type": "perf",
-					"release": "patch"
-				},
-				{
-					"type": "performance",
-					"release": "patch"
-				},
-				{
-					"type": "refactor",
-					"release": "patch"
-				},
-				{
-					"type": "revert",
-					"release": "patch"
-				},
-				{
-					"type": "style",
-					"release": "patch"
-				}
-			],
+			"releaseRules": "./.release-rules.js",
 			"parserOpts": {
 				"noteKeywords": [
-					"[BREAKING CHANGE]",
-					"[BREAKING CHANGES]",
-					"[BREAKING]"
+					"BREAKING CHANGE",
+					"BREAKING CHANGES",
+					"BREAKING"
 				]
 			}
 		}

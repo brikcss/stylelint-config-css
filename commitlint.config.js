@@ -21,7 +21,7 @@ module.exports = {
 		'footer-leading-blank': [1, 'always'],
 		'footer-tense': [1, 'always', ['present-imperative']],
 		lang: [1, 'always', 'eng'],
-		'scope-case': [2, 'always', 'lowerCase'],
+		// 'scope-case': [2, 'always', 'lowerCase'],
 		'scope-enum': [0, 'always', [
 			'css',
 			'angularjs',
@@ -44,6 +44,9 @@ module.exports = {
 				'tools',
 				'chore',
 				'revert',
+				'BREAKING',
+				'MINOR',
+				'PATCH'
 			]]
 	}
 };
