@@ -15,7 +15,6 @@ cache:
     - node_modules
 notifications:
   email:
-    on_success: always
     on_failure: always
 node_js:
   - '8'
