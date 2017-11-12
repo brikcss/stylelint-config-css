@@ -44,9 +44,6 @@ module.exports = {
 				'tools',
 				'chore',
 				'revert',
-				'BREAKING',
-				'MINOR',
-				'PATCH'
 			]]
 	}
 };

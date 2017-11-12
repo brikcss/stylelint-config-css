@@ -25,7 +25,7 @@ before_script:
 script:
   - npm run prod -d
 after_success:
-  - npm run release -d
+  - npm run release -dd
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
