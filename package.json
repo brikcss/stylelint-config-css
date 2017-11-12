@@ -94,7 +94,7 @@
 		"tag": "dev"
 	},
 	"devDependencies": {
-		"@brikcss/eslint-config-brikcss": "0.0.1",
+		"@brikcss/eslint-config-brikcss": "0.1.0",
 		"@commitlint/cli": "^4.2.2",
 		"@commitlint/prompt": "^4.2.2",
 		"autoprefixer": "^7.1.4",
