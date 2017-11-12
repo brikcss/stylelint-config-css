@@ -14,7 +14,7 @@
 
 1. [Set up the new component repo & test](#set-up-the-new-component-repo-and-test)
 1. [Update configs / root files](#update-configs--root-files)
-1. [Set up the release](#set-up-the-release)
+1. [Set up the automated release](#set-up-the-automated-release)
 1. [Build the component](#build-the-component)
 
 <!-- /MarkdownTOC -->
@@ -49,7 +49,7 @@
 		- [ ] `js:watch` and `js:lint` paths.
 		- [ ] `sass:watch` and `sass:lint` and `sass:dist` paths.
 		- [ ] If the component will have `dist` files, or if there are any tasks you want the release process to run prior to publishing, add the following NPM script to `package.json`:
-			```json
+			```js
 			"prepublishOnly": "npm run prod"
 			```
 	- [ ] `devDependencies`.
@@ -58,26 +58,43 @@
 	- [ ] Update the rest of `README.md` as desired.
 - [ ] `webpack.config.js` to ensure it compiles the correct files / bundles.
 
-<a name="set-up-the-release"></a>
-## Set up the release
+<a name="set-up-the-automated-release"></a>
+## Set up the automated release
 
 - [ ] Install NPM packages with `npm install`.
 - [ ] Set up [`semantic-release`](https://github.com/semantic-release/semantic-release) by running `semantic-release-cli setup`.
-
-_Note: Semantic release will publish your first release as version `1.0.0`, there's no known way to change this. If you want to start at a version less than `1.0.0` (such as `0.0.1`), do the following to ensure it is not bumped to `1.0.0` by `semantic-release`:_
-
-- [ ] Update the `version` in `package.json` to `0.0.1`.
-- [ ] Publish your first release manually with `npm publish --tag=<tag> --access=public`.
-- [ ] Update `version` in `package.json` back to `0.0.0-development`.
+- [ ] Create a `master` branch for the `stable` channel and a `dev` branch for the `dev` channel.
+- [ ] Configure `package.json` on the `master` branch to point to the `latest` channel:
+	```js
+	"release": {
+		"branch": "master"
+	},
+	"publishConfig": {
+		"tag": "latest"
+	},
+	```
+- [ ] Configure `package.json` on the `dev` branch to point to the `dev` channel:
+	```js
+	"release": {
+		"branch": "dev"
+	},
+	"publishConfig": {
+		"tag": "dev"
+	},
+	```
+- [ ] [semantic-release](https://github.com/semantic-release/semantic-release) creates the first release at version `1.0.0`. If you want to start on a different version (such as `0.0.1`), you must do the following:
+	- [ ] Update the `version` in `package.json` to `0.0.1` (or the version you wish to start at).
+	- [ ] Publish your first release manually with `npm publish --tag=<tag> --access=public`.
+	- [ ] Update `version` in `package.json` back to `0.0.0-development`.
 
 <a name="build-the-component"></a>
 ## Build the component
 
-Directory structure:
+The directory structure should be as follows:
 
 - `src`: Original source code.
-- `examples`: Code or test examples.
-- `tests`: UI and unit tests.
 - `dist`: Files for distribution (if any).
-- `lib`: Helper scripts (i.e., NPM scripts or git hooks).
+- `examples`: Code or test examples.
 - `docs`: Documentation.
+- `tests`: UI and unit tests.
+- `lib`: Helper scripts (i.e., NPM scripts or git hooks).
