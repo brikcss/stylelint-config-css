@@ -77,7 +77,7 @@
 		"semantic-release": "semantic-release pre && npm publish && semantic-release post"
 	},
 	"release": {
-		"branch": "dev",
+		"branch": "master",
 		"analyzeCommits": {
 			"preset": "angular",
 			"releaseRules": "./.release-rules.js",
