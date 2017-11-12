@@ -16,7 +16,7 @@
 		"indent_char": "\t",
 		"indent_size": 1,
 		"indent_with_tabs": true,
-		"max_preserve_newlines": 2,
+		"max_preserve_newlines": 3,
 		"preserve_newlines": true,
 		"wrap_line_length": 0
 	},
@@ -40,8 +40,8 @@
 		"break_chained_methods": false,
 		"comma_first": false,
 		"e4x": false,
-		"jslint_happy": false,
-		"keep_array_indentation": true,
+		"jslint_happy": true,
+		"keep_array_indentation": false,
 		"keep_function_indentation": false,
 		"operator_position": "before-newline",
 		"space_after_anon_function": false,
@@ -53,6 +53,7 @@
 
 	"json": {
 		"brace_style": "collapse-preserve-inline",
+		"jslint_happy": true,
 		"keep_array_indentation": false,
 		"unescape_strings": false
 	},
@@ -60,14 +61,14 @@
 	"custom": {
 		// "package?(-lock).json":
 		// {
-		//     "indent_size": 2,
-		//     "brace_style": "collapse"
+		// 	"indent_size": 2,
+		// 	"brace_style": "collapse"
 		// },
 
 		// "*.sublime-@(settings|keymap|commands|menu)":
 		// {
-		//     "indent_size": 4,
-		//     "brace_style": "collapse-preserve-inline"
+		// 	"indent_size": 4,
+		// 	"brace_style": "collapse-preserve-inline"
 		// }
 	}
 }
