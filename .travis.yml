@@ -20,6 +20,8 @@ notifications:
 node_js:
   - '9'
   - '8'
+env:
+  - BUILD_LEADER=3
 before_script: npm prune -d
 script: npm run prod -d
 
