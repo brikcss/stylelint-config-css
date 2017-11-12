@@ -133,7 +133,7 @@ module.exports = {
 				'function-comma-space-before': 'never',
 				'function-max-empty-lines': 0,
 				// 'function-name-case': ['lower', {ignoreFunctions: ["/^(get|\#\{get).*$/"]}],
-				'function-name-case': ['lower', {ignoreFunctions: ["/^\#\{.*$/"]}],
+				'function-name-case': ['lower', {ignoreFunctions: ["/^#{.*$/"]}],
 				'function-parentheses-newline-inside': 'never-multi-line',
 				'function-parentheses-space-inside': 'never',
 				'function-url-quotes': 'always',
