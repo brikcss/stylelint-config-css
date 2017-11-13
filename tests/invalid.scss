@@ -1,0 +1,26 @@
+@import url(test.css);
+
+
+a {
+	color: #333;
+	padding: 10px !important;
+	top: .2em;
+}
+
+.my-utility { display: none }
+
+.my-selector-1, .my-selector-2 {
+	width: 30%;
+
+	.child1 {
+		width: 10%;
+
+		.child2 {
+			width: 10%;
+
+			.child3 {
+				width: 10%;
+			}
+		}
+	}
+}

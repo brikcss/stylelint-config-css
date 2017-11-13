@@ -1,0 +1,24 @@
+@import url("test.css");
+
+
+// stylelint-disable-next-line selector-max-type
+a {
+	color: rgb(51, 51, 51);
+	padding: 1rem;
+	top: 0.2em;
+}
+
+.my-utility { display: none; }
+
+.my-selector-1,
+.my-selector-2 {
+	width: 30%;
+
+	.child1 {
+		width: 10%;
+
+		.child2 {
+			width: 10%;
+		}
+	}
+}
