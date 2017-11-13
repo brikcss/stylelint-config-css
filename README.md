@@ -1,4 +1,4 @@
-# Brikcss Stylelint Configuration
+# Brikcss Stylelint Configuration (SASS)
 
 > [stylelint](https://stylelint.io) shareable configuration by [brikcss](https://github.com/brikcss/).
 
