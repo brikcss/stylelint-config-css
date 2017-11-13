@@ -29,7 +29,6 @@ module.exports = {
 				'declaration-block-no-duplicate-properties': [true,
 					{
 						// ignoreProperties: [],
-						severity: 'error',
 						ignore: ['consecutive-duplicates-with-different-values'],
 					}
 				],
