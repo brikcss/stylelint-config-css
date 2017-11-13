@@ -1,16 +1,16 @@
 {
-	"name": "@brikcss/stylelint-config-brikcss-sass",
+	"name": "@brikcss/stylelint-config-sass",
 	"version": "0.0.0-development",
 	"description": "stylelint shareable configuration by brikcss.",
 	"author": "The Zimmee <thezimmee@gmail.com>",
 	"license": "MIT",
-	"homepage": "https://github.com/brikcss/stylelint-config-brikcss-sass",
+	"homepage": "https://github.com/brikcss/stylelint-config-sass",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/brikcss/stylelint-config-brikcss-sass.git"
+		"url": "https://github.com/brikcss/stylelint-config-sass.git"
 	},
 	"bugs": {
-		"url": "https://github.com/brikcss/stylelint-config-brikcss-sass/issues"
+		"url": "https://github.com/brikcss/stylelint-config-sass/issues"
 	},
 	"keywords": [
 		"brikcss",
