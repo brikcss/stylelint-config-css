@@ -4,13 +4,13 @@
 	"description": "stylelint shareable configuration by brikcss.",
 	"author": "The Zimmee <thezimmee@gmail.com>",
 	"license": "MIT",
-	"homepage": "https://github.com/brikcss/stylelint-config-brikcss",
+	"homepage": "https://github.com/brikcss/stylelint-config-brikcss-sass",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/brikcss/stylelint-config-brikcss.git"
+		"url": "https://github.com/brikcss/stylelint-config-brikcss-sass.git"
 	},
 	"bugs": {
-		"url": "https://github.com/brikcss/stylelint-config-brikcss/issues"
+		"url": "https://github.com/brikcss/stylelint-config-brikcss-sass/issues"
 	},
 	"keywords": [
 		"brikcss",
