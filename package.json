@@ -79,6 +79,11 @@
 	"publishConfig": {
 		"tag": "dev"
 	},
+	"dependencies": {
+		"stylelint": "8.2.0",
+		"stylelint-config-recommended": "1.0.0",
+		"stylelint-formatter-pretty": "1.0.3"
+	},
 	"devDependencies": {
 		"@brikcss/eslint-config-brikcss": "0.1.0",
 		"@commitlint/cli": "^4.2.2",
@@ -103,10 +108,6 @@
 		"postcss-cli": "4.1.1",
 		"postcss-reporter": "5.0.0",
 		"postcss-scss": "1.0.2",
-		"semantic-release": "^8.2.0",
-		"stylelint": "8.2.0",
-		"stylelint-config-recommended": "1.0.0",
-		"stylelint-formatter-pretty": "1.0.3",
-		"stylelint-scss": "2.1.0"
+		"semantic-release": "^8.2.0"
 	}
 }
