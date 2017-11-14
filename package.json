@@ -41,7 +41,7 @@
 		"watch": "concurrently --raw \"npm run js:watch\" \"npm run css:watch\"",
 		"// [TESTS]": "UI and unit tests, as well as code quality checkers.",
 		"pretest": "echo \"Running tests...\n\"",
-		"test": "cross-env NODE_ENV=production concurrently --kill-others-on-fail --names=css:lint,js:lint \"npm run css:lint:valid\" \"npm run js:lint\" || npm run test:fail",
+		"test": "npm prune && npm install && cross-env NODE_ENV=production concurrently --kill-others-on-fail --names=css:lint,js:lint \"npm run css:lint:valid\" \"npm run js:lint\" || npm run test:fail",
 		"posttest": "echo \"\n[ok] Tests complete.\n\"",
 		"test:fail": "echo \"\n[FAIL] Tests failed.\n\" && exit 1",
 		"// [JS]": "// Lint JS files.",
