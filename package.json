@@ -1,16 +1,16 @@
 {
-	"name": "@brikcss/stylelint-config-sass",
-	"version": "0.0.0-development",
-	"description": "stylelint shareable configuration by brikcss.",
+	"name": "@brikcss/stylelint-config-css",
+	"version": "0.0.1",
+	"description": "CSS stylelint shareable configuration by brikcss.",
 	"author": "The Zimmee <thezimmee@gmail.com>",
 	"license": "MIT",
-	"homepage": "https://github.com/brikcss/stylelint-config-sass",
+	"homepage": "https://github.com/brikcss/stylelint-config-css",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/brikcss/stylelint-config-sass.git"
+		"url": "https://github.com/brikcss/stylelint-config-css.git"
 	},
 	"bugs": {
-		"url": "https://github.com/brikcss/stylelint-config-sass/issues"
+		"url": "https://github.com/brikcss/stylelint-config-css/issues"
 	},
 	"keywords": [
 		"brikcss",
@@ -38,19 +38,19 @@
 		"// [START]": "Run `npm start` as an alias for development.",
 		"start": "npm run watch",
 		"// [WATCH]": "For local development. Watches files, rebuilds when source files change, runs local server with live reload.",
-		"watch": "concurrently --raw \"npm run js:watch\" \"npm run sass:watch\"",
+		"watch": "concurrently --raw \"npm run js:watch\" \"npm run css:watch\"",
 		"// [TESTS]": "UI and unit tests, as well as code quality checkers.",
 		"pretest": "echo \"Running tests...\n\"",
-		"test": "cross-env NODE_ENV=production concurrently --kill-others-on-fail --names=sass:lint,js:lint \"npm run sass:lint:valid\" \"npm run js:lint\" || npm run test:fail",
+		"test": "cross-env NODE_ENV=production concurrently --kill-others-on-fail --names=css:lint,js:lint \"npm run css:lint:valid\" \"npm run js:lint\" || npm run test:fail",
 		"posttest": "echo \"\n[ok] Tests complete.\n\"",
 		"test:fail": "echo \"\n[FAIL] Tests failed.\n\" && exit 1",
 		"// [JS]": "// Lint JS files.",
 		"js:watch": "chokidar ./*.js --command './node_modules/.bin/eslint {path} --format=stylish && echo \"[ok] JS lint complete.\"'",
 		"js:lint": "./node_modules/.bin/eslint ./*.js --format=stylish",
 		"// [SASS]": "// Lint SASS files.",
-		"sass:watch": "npm run sass:lint:all && chokidar ./tests/*.scss -c 'stylelint {path} && echo \"[ok] CSS lint complete.\"' --verbose",
-		"sass:lint:all": "stylelint ./tests/*.scss",
-		"sass:lint:valid": "stylelint ./tests/valid.scss",
+		"css:watch": "npm run css:lint:all && chokidar ./tests/*.css -c 'stylelint {path} && echo \"[ok] CSS lint complete.\"' --verbose",
+		"css:lint:all": "stylelint ./tests/*.css",
+		"css:lint:valid": "stylelint ./tests/valid.css",
 		"// [GIT|HUSKY]": "// Helpers for interacting with git and husky (githooks).",
 		"commit": "echo \"See the \"git commit policy\" in CONTRIBUTING.md for details on how to write a valid commit message.\n\" && git-cz",
 		"commitmsg": "commitlint -e $GIT_PARAMS",
