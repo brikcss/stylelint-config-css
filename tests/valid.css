@@ -1,5 +1,4 @@
-@import url("test.css");
-
+@import url('test.css');
 
 /* stylelint-disable-next-line selector-max-type */
 a {
@@ -8,7 +7,9 @@ a {
 	top: 0.2em;
 }
 
-.my-utility { display: none; }
+.my-utility {
+	display: none;
+}
 
 .my-selector-1,
 .my-selector-2 {
