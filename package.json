@@ -80,12 +80,12 @@
 		"tag": "dev"
 	},
 	"peerDependencies": {
-		"stylelint": "8.x",
+		"stylelint": "9.x",
 		"stylelint-config-recommended": "1.x",
 		"stylelint-formatter-pretty": "1.x"
 	},
 	"dependencies": {
-		"stylelint": "8.x",
+		"stylelint": "9.x",
 		"stylelint-config-recommended": "1.x",
 		"stylelint-formatter-pretty": "1.x"
 	},
