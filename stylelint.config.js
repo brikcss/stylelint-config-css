@@ -124,7 +124,7 @@ module.exports = {
 		'color-hex-length': 'short',
 		// Fonts.
 		'font-family-name-quotes': 'always-unless-keyword',
-		'font-weight-notation': 'named-where-possible',
+		// 'font-weight-notation': 'named-where-possible',
 		// Functions.
 		'function-comma-newline-after': 'never-multi-line',
 		// 'function-comma-newline-before': false,
