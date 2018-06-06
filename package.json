@@ -1,6 +1,6 @@
 {
 	"name": "@brikcss/stylelint-config-css",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "CSS stylelint shareable configuration by brikcss.",
 	"author": "The Zimmee <thezimmee@gmail.com>",
 	"license": "MIT",
@@ -56,7 +56,7 @@
 		"commitmsg": "commitlint -e $GIT_PARAMS",
 		"preparecommitmsg": "lib/hooks/prepare-commit-msg.sh ${GIT_PARAMS}",
 		"// prepush:": "Runs tests and checks for a clean state (excluding untracked files).",
-		"prepush": "npm run git:checkstage && npm run test && echo \"\nPushing code...\n\"",
+		"prepush": "npm run git:checkstage && echo \"\nPushing code...\n\"",
 		"git:checkstage": ". ./lib/hooks/ensure-clean-stage.sh",
 		"// [RELEASE]": "Semantic release manages our release process.",
 		"release": "semantic-release pre && npm publish && semantic-release post",
