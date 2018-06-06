@@ -52,7 +52,7 @@ module.exports = {
 		// 'function-blacklist': [], // Disallowed functions.
 		// 'function-whitelist': [], // Allowed functions.
 		// Numbers / units.
-		'unit-blacklist': ['px', { ignoreMediaFeatureNames: { px: ['min-width', 'max-width'] } }], // Disallowed units.
+		'unit-blacklist': ['cm', 'in', 'mm', 'pc', 'pt'], // Disallowed units.
 		// 'unit-whitelist': ['rem', 'em', '%', 'deg', 'vh', 'vw', 's', 'ms'], // Allowed units.
 		'number-max-precision': 5,
 		// Values.
@@ -62,16 +62,25 @@ module.exports = {
 		// 'property-whitelist': [], // Allowed properties.
 		'property-no-vendor-prefix': true,
 		// Declaration blocks.
-		// 'declaration-property-unit-blacklist': {
-		// 	'font-size': ['px']
-		// }, // Disallowed propert/unit pairs.
-		'declaration-property-unit-whitelist': {
-			'font-size': ['em', 'rem', '%'],
-			height: ['em', 'rem', '%', 'vw', 'vh'],
-			width: ['em', 'rem', '%', 'vw', 'vh'],
-			margin: ['em', 'rem', '%', 'vw', 'vh'],
-			padding: ['em', 'rem', '%', 'vw', 'vh']
-		}, // Allowed property/unit pairs.
+		'declaration-property-unit-blacklist': {
+			// '/^font/': ['px'],
+			'line-height': ['px'],
+			'/height/': ['px'],
+			'/width/': ['px'],
+			'/^margin/': ['px'],
+			'/^padding/': ['px']
+		}, // Disallowed propert/unit pairs.
+		// 'declaration-property-unit-whitelist': {
+		// 	'/^font-/': ['em', 'rem', '%'],
+		// 	'line-height': ['rem', 'em', '%', ''],
+		// 	height: ['em', 'rem', '%', 'vw', 'vh'],
+		// 	width: ['em', 'rem', '%', 'vw', 'vh'],
+		// 	'/^min-/': ['em', 'rem', '%', 'vw', 'vh'],
+		// 	'/^max-/': ['em', 'rem', '%', 'vw', 'vh'],
+		// 	'/^margin/': ['em', 'rem', '%', 'vw', 'vh'],
+		// 	'/^padding/': ['em', 'rem', '%', 'vw', 'vh'],
+		// 	'/^border/': ['rem', 'em', 'px', '%']
+		// }, // Allowed property/unit pairs.
 		// 'declaration-property-value-blacklist': {
 		// 	'position': ['fixed']
 		// }, // Disallowed property/value pairs.
@@ -173,7 +182,7 @@ module.exports = {
 		// 'block-opening-brace-newline-before': false,
 		'block-opening-brace-space-after': 'always-single-line',
 		'block-opening-brace-space-before': 'always',
-		'rule-empty-line-before': ['always-multi-line', { except: ['first-nested'], ignore: ['after-comment'] }],
+		// 'rule-empty-line-before': ['always-multi-line', { except: ['first-nested'], ignore: ['after-comment'] }],
 		// Selectors.
 		'selector-attribute-brackets-space-inside': 'never',
 		'selector-attribute-operator-space-after': 'never',
