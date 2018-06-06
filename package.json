@@ -1,6 +1,6 @@
 {
 	"name": "@brikcss/stylelint-config-css",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "CSS stylelint shareable configuration by brikcss.",
 	"author": "The Zimmee <thezimmee@gmail.com>",
 	"license": "MIT",
@@ -79,40 +79,35 @@
 	"publishConfig": {
 		"tag": "dev"
 	},
-	"peerDependencies": {
-		"stylelint": "9.x",
-		"stylelint-config-recommended": "1.x",
-		"stylelint-formatter-pretty": "1.x"
-	},
 	"dependencies": {
-		"stylelint": "9.x",
-		"stylelint-config-recommended": "1.x",
-		"stylelint-formatter-pretty": "1.x"
+		"stylelint": "9.2.1",
+		"stylelint-config-recommended": "2.1.0",
+		"stylelint-formatter-pretty": "1.0.3"
 	},
 	"devDependencies": {
-		"@brikcss/eslint-config-brikcss": "0.1.0",
-		"@commitlint/cli": "^4.2.2",
-		"@commitlint/prompt": "^4.2.2",
-		"autoprefixer": "^7.1.4",
-		"babel-cli": "^6.26.0",
-		"babel-core": "^6.26.0",
-		"babel-eslint": "^8.0.1",
-		"babel-plugin-add-module-exports": "^0.2.1",
-		"babel-polyfill": "^6.26.0",
-		"babel-preset-env": "^1.6.1",
-		"babel-preset-es2015": "^6.24.1",
-		"chokidar-cli": "^1.2.0",
-		"commitizen": "^2.9.6",
-		"concurrently": "3.5.0",
-		"cross-env": "^5.1.1",
-		"eslint": "^4.9.0",
-		"eslint-loader": "^1.9.0",
-		"fs-extra": "^4.0.2",
-		"husky": "^0.14.3",
-		"postcss": "^6.0.13",
-		"postcss-cli": "4.1.1",
+		"@brikcss/eslint-config-brikcss": "0.1.2",
+		"@commitlint/cli": "7.0.0",
+		"@commitlint/prompt": "7.0.0",
+		"autoprefixer": "8.6.0",
+		"babel-cli": "6.26.0",
+		"babel-core": "6.26.3",
+		"babel-eslint": "8.2.3",
+		"babel-plugin-add-module-exports": "0.2.1",
+		"babel-polyfill": "6.26.0",
+		"babel-preset-env": "1.7.0",
+		"babel-preset-es2015": "6.24.1",
+		"chokidar-cli": "1.2.0",
+		"commitizen": "2.10.1",
+		"concurrently": "3.5.1",
+		"cross-env": "5.1.6",
+		"eslint": "4.19.1",
+		"eslint-loader": "2.0.0",
+		"fs-extra": "6.0.1",
+		"husky": "0.14.3",
+		"postcss": "6.0.22",
+		"postcss-cli": "5.0.0",
 		"postcss-reporter": "5.0.0",
-		"postcss-scss": "1.0.2",
-		"semantic-release": "^8.2.0"
+		"postcss-scss": "1.0.5",
+		"semantic-release": "15.5.1"
 	}
 }
