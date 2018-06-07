@@ -65,8 +65,10 @@ module.exports = {
 		'declaration-property-unit-blacklist': {
 			// '/^font/': ['px'],
 			'line-height': ['px'],
-			'/height/': ['px'],
-			'/width/': ['px'],
+			height: ['px'],
+			width: ['px'],
+			'/^min-/': ['px'],
+			'/^max-/': ['px'],
 			'/^margin/': ['px'],
 			'/^padding/': ['px']
 		}, // Disallowed propert/unit pairs.
