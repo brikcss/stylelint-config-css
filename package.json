@@ -1,6 +1,6 @@
 {
 	"name": "@brikcss/stylelint-config-css",
-	"version": "0.1.4",
+	"version": "0.2.0",
 	"description": "CSS stylelint shareable configuration by brikcss.",
 	"author": "The Zimmee <thezimmee@gmail.com>",
 	"license": "MIT",
@@ -25,10 +25,7 @@
 		"module"
 	],
 	"main": "index.js",
-	"files": [
-		"index.js",
-		"stylelint.config.js"
-	],
+	"files": ["index.js", "stylelint.config.js"],
 	"config": {
 		"commitizen": {
 			"path": "@commitlint/prompt"
@@ -37,30 +34,38 @@
 	"scripts": {
 		"// [START]": "Run `npm start` as an alias for development.",
 		"start": "npm run watch",
-		"// [WATCH]": "For local development. Watches files, rebuilds when source files change, runs local server with live reload.",
+		"// [WATCH]":
+			"For local development. Watches files, rebuilds when source files change, runs local server with live reload.",
 		"watch": "concurrently --raw \"npm run js:watch\" \"npm run css:watch\"",
 		"// [TESTS]": "UI and unit tests, as well as code quality checkers.",
 		"pretest": "echo \"Running tests...\n\"",
-		"test": "npm prune && npm install && cross-env NODE_ENV=production concurrently --kill-others-on-fail --names=css:lint,js:lint \"npm run css:lint:valid\" \"npm run js:lint\" || npm run test:fail",
+		"test":
+			"npm prune && npm install && cross-env NODE_ENV=production concurrently --kill-others-on-fail --names=css:lint,js:lint \"npm run css:lint:valid\" \"npm run js:lint\" || npm run test:fail",
 		"posttest": "echo \"\n[ok] Tests complete.\n\"",
 		"test:fail": "echo \"\n[FAIL] Tests failed.\n\" && exit 1",
 		"// [JS]": "// Lint JS files.",
-		"js:watch": "chokidar ./*.js --command './node_modules/.bin/eslint {path} --format=stylish && echo \"[ok] JS lint complete.\"'",
+		"js:watch":
+			"chokidar ./*.js --command './node_modules/.bin/eslint {path} --format=stylish && echo \"[ok] JS lint complete.\"'",
 		"js:lint": "./node_modules/.bin/eslint ./*.js --format=stylish",
 		"// [SASS]": "// Lint SASS files.",
-		"css:watch": "npm run css:lint:all && chokidar ./tests/*.css -c 'stylelint {path} && echo \"[ok] CSS lint complete.\"' --verbose",
+		"css:watch":
+			"npm run css:lint:all && chokidar ./tests/*.css -c 'stylelint {path} && echo \"[ok] CSS lint complete.\"' --verbose",
 		"css:lint:all": "stylelint ./tests/*.css",
 		"css:lint:valid": "stylelint ./tests/valid.css",
-		"// [GIT|HUSKY]": "// Helpers for interacting with git and husky (githooks).",
-		"commit": "echo \"See the \"git commit policy\" in CONTRIBUTING.md for details on how to write a valid commit message.\n\" && git-cz",
+		"// [GIT|HUSKY]":
+			"// Helpers for interacting with git and husky (githooks).",
+		"commit":
+			"echo \"See the \"git commit policy\" in CONTRIBUTING.md for details on how to write a valid commit message.\n\" && git-cz",
 		"commitmsg": "commitlint -e $GIT_PARAMS",
 		"preparecommitmsg": "lib/hooks/prepare-commit-msg.sh ${GIT_PARAMS}",
-		"// prepush:": "Runs tests and checks for a clean state (excluding untracked files).",
+		"// prepush:":
+			"Runs tests and checks for a clean state (excluding untracked files).",
 		"prepush": "npm run git:checkstage && echo \"\nPushing code...\n\"",
 		"git:checkstage": ". ./lib/hooks/ensure-clean-stage.sh",
 		"// [RELEASE]": "Semantic release manages our release process.",
 		"release": "semantic-release pre && npm publish && semantic-release post",
-		"semantic-release": "semantic-release pre && npm publish && semantic-release post"
+		"semantic-release":
+			"semantic-release pre && npm publish && semantic-release post"
 	},
 	"release": {
 		"branch": "master",
@@ -68,11 +73,7 @@
 			"preset": "angular",
 			"releaseRules": "./.release-rules.js",
 			"parserOpts": {
-				"noteKeywords": [
-					"BREAKING CHANGE",
-					"BREAKING CHANGES",
-					"BREAKING"
-				]
+				"noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
 			}
 		}
 	},
@@ -81,6 +82,7 @@
 	},
 	"dependencies": {
 		"stylelint": "9.2.1",
+		"stylelint-config-prettier": "^4.0.0",
 		"stylelint-config-recommended": "2.1.0",
 		"stylelint-formatter-pretty": "1.0.3"
 	},
