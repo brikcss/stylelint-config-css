@@ -1,5 +1,7 @@
 # Brikcss Stylelint Configuration (CSS)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/brikcss/stylelint-config-css.svg)](https://greenkeeper.io/)
+
 > [stylelint](https://stylelint.io) shareable configuration by [brikcss](https://github.com/brikcss/).
 
 <!-- Shields. -->
