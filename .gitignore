@@ -1,12 +1,4 @@
-##
-# .gitignore
-# ----------
-# @author brikcss
-# @homepage https://github.com/brikcss
-# @description Files to ignore by [git](https://git-scm.com/).
-# ---------------------------------------------------------------------
-##
-
+#! .gitignore | @author brikcss (https://github.com/brikcss) | @reference (https://git-scm.com/docs/gitignore) #
 
 # Node
 node_modules
@@ -14,5 +6,19 @@ node_modules
 # MacOS
 .DS_Store
 
-# App
-.tests
+# Test results
+/.nyc_output
+/coverage
+
+# Build files
+/dist
+/build
+/bin
+/umd
+/esm
+/cjs
+/.temp
+/.shots/current
+/package
+*.zip
+*.tgz
