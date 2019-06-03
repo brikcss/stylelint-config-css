@@ -7,7 +7,6 @@
 # ---------------------------------------------------------------------
 ##
 
-
 language: node_js
 cache:
   bundler: true
@@ -21,7 +20,7 @@ env: BUILD_LEADER_ID=1 NODE_ENV=test
 jobs:
   include:
     - stage: Test on node 8
-      node_js: '8'
+      node_js: "8"
       before_script: npm prune -d
       script: npm run test -d
       deploy:
@@ -36,8 +35,9 @@ jobs:
       #     - npx semantic-release
 
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - master
+    - /^greenkeeper/.*$/
 # branches:
 #   except:
 #     - /^v\d+\.\d+\.\d+$/
