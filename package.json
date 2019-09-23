@@ -5,7 +5,7 @@
   "author": "The Zimmee <thezimmee@gmail.com>",
   "dependencies": {
     "stylelint": "10.0.1",
-    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-prettier": "^6.0.0",
     "stylelint-config-recommended": "2.2.0",
     "stylelint-formatter-pretty": "1.0.3"
   },
