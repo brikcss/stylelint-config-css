@@ -10,7 +10,7 @@
     "stylelint-formatter-pretty": "1.1.3"
   },
   "devDependencies": {
-    "@brikcss/git-hooks": "^2.2.1"
+    "@brikcss/git-hooks": "^3.0.0"
   },
   "scripts": {
     "start": "npm test",
