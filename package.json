@@ -1,6 +1,6 @@
 {
   "name": "@brikcss/stylelint-config-css",
-  "version": "0.2.2",
+  "version": "0.0.0-development",
   "description": "CSS stylelint shareable configuration by brikcss.",
   "author": "The Zimmee <thezimmee@gmail.com>",
   "dependencies": {
@@ -10,14 +10,16 @@
     "stylelint-formatter-pretty": "1.1.3"
   },
   "devDependencies": {
-    "@brikcss/git-hooks": "^2.2.1"
+    "@brikcss/git-hooks": "^2.2.1",
+    "semantic-release": "^15.13.27"
   },
   "scripts": {
     "start": "npm test",
     "pretest": "echo \"Running tests...\n\"",
     "test": "standard --fix && stylelint ./tests/valid.css || npm run test:fail",
     "posttest": "echo \"\n[ok] Tests complete.\n\"",
-    "test:fail": "echo \"\n[FAIL] Tests failed.\n\" && exit 1"
+    "test:fail": "echo \"\n[FAIL] Tests failed.\n\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "main": "index.js",
   "files": ["index.js", "stylelint.config.js"],
