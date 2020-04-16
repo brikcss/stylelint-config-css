@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@brikcss/git-hooks": "^3.0.0",
-    "semantic-release": "^15.13.27"
+    "semantic-release": "^17.0.5"
   },
   "scripts": {
     "start": "npm test",
